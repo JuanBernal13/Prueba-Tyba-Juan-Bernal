@@ -26,6 +26,7 @@ app.use('/api/v1', userRoutes);
 app.use('/api/v1', locationRoutes);
 app.use('/api/v1', healthRoutes);
 
+console.log('Prueba de tests');
 
 // Inicio de la aplicacion
 app.listen(process.env.PORT, () => {
