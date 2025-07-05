@@ -6,6 +6,30 @@ La app cuenta con implementacion de tests mediante `postman` para su testeo, imp
 
 Para la funcionalidad de busqueda de restaurantes, se usa el API de google maps mediante un secreto insertado en el `docker-compose`. Como base de datos, se utiliza mongoDB.
 
+Se implementan 2 bases de datos, una que tiene que como objetivo mostrar la info de los usuarios con las **contraseñas hasheadas** (Para hacer la autenticacion de los usuarios lo mas segura posible). Y otra que guarda toda la info sobre el tracking de cada uno de los usuarios y todos los usuarios durante el despliegue de la app.
+
+## Arquitectura:
+
+![image](https://github.com/user-attachments/assets/8f64320e-8e9b-42b2-b2c8-bf41fd2af4a8)
+
+La arquitectura propuesta se basa en capas, donde cada vez que se llega a un endpoint, la objeto de la ruta llama al controlador, posteriormente, este llama al servicio, y dependiendo cual sea el servicio que se llame, se llama a la respectiva implementacion de la base de datos o al servicio externo como el caso de Google maps.
+
+
+## **Bases de datos y modelos**:
+
+
+Modelo de usuario:
+
+![image](https://github.com/user-attachments/assets/6bf91b44-38d4-4ca7-a797-4501b7ef2932)
+
+Modelo del item de tracking de la actividad de los usuarios:
+
+
+![image](https://github.com/user-attachments/assets/7c0de0e0-6eb7-4624-862c-8e70a2c98b30)
+
+
+Con este modelo, se puede trackear de forma correcta las acciones de un usuario logeado en la app.
+
 
 # API Endpoints
 
