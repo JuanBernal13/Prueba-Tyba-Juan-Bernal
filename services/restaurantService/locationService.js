@@ -28,7 +28,7 @@ class LocationService {
             if (response.data.status !== 'OK' && response.data.status !== 'ZERO_RESULTS') {
                 throw new Error(`Google API error: ${response.data.status}`);
             }
-
+    //Obtener los primeros 15 restaurantes de la respuesta de la API.
             const restaurants = response.data.results.slice(0, 15).map(place => {
                 const restaurant = {
                     id: place.place_id,
