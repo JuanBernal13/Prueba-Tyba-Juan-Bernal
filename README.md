@@ -48,7 +48,9 @@ npm run docker:down
 
 La aplicación se ejecuta en `http://localhost:3000`
 
+## Secretos
 
+Los secretos se encuentran en el `docker-compose` para iniciar el despliegue de la aplicacion.
 ## Info
 
 - Todos los endpoints (excepto `/health`, `/register` y `/login`) requieren autenticación. No se tiene tracking del endpoint `/health`
