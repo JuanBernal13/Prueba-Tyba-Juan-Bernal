@@ -46,10 +46,6 @@ npm run docker:down
 
 La aplicación se ejecuta en `http://localhost:3000`
 
-## Ejecutar la aplicación con NPX
-
-
-La aplicación esta disponible en `http://localhost:3000`
 
 ## Info
 
