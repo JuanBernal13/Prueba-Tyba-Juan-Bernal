@@ -26,6 +26,7 @@ app.use('/api/v1', userRoutes);
 app.use('/api/v1', locationRoutes);
 app.use('/api/v1', healthRoutes);
 
+
 // Inicio de la aplicacion
 app.listen(process.env.PORT, () => {
   console.log(`Servidor iniciado en http://localhost:${process.env.PORT}`);
