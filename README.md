@@ -1,6 +1,15 @@
+# Juan Andres Bernal - Prueba tecnica Tyba
+
+Implementacion de backend con servicio de autenticacion funcional mediante uso de cookies brindadas por `express session`.
+
+La app cuenta con implementacion de tests mediante `postman` para su testeo, implementacion de `docker-compose` para su despliegue local. Cuenta on los requerimientos explicados en la prueba, cumpliendo con cada uno de los end points de forma correcta.
+
+Para la funcionalidad de busqueda de restaurantes, se usa el API de google maps mediante un secreto insertado en el `docker-compose`. Como base de datos, se utiliza mongoDB.
+
+
 # API Endpoints
 
-## Health Check
+## Health Check (No requiere autenticación)
 - **GET** `/api/v1/health` - Verifica el estado del servicio
 
 ## Autenticación
@@ -10,11 +19,11 @@
 
 ## Perfil de Usuario
 - **GET** `/api/v1/profile` - Obtiene el perfil del usuario autenticado
-- **GET** `/api/v1/emails` - Lista todos los emails registrados (requiere autenticación)
+- **GET** `/api/v1/emails` - Lista todos los emails registrados
 
 ## Historial de Actividad
 - **GET** `/api/v1/historial` - Obtiene el historial de actividad del usuario autenticado
-- **GET** `/api/v1/historialApp` - Obtiene todo el historial de actividad (requiere autenticación)
+- **GET** `/api/v1/historialApp` - Obtiene todo el historial de actividad
 
 ## Restaurantes
 - **POST** `/api/v1/restaurants` - Busca restaurantes cercanos a coordenadas específicas (requiere autenticación)
