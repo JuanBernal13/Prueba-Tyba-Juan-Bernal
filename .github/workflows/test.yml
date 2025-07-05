@@ -1,0 +1,37 @@
+name: Ejecutar Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v4
+
+    - name: Usar Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Instalar dependencias
+      run: npm ci
+
+    - name: Ejecutar Tests
+      run: npm test
+
+    - name: Subir informes de cobertura
+      if: matrix.node-version == '20.x'
+      uses: codecov/codecov-action@v3
+      with:
+        fail_ci_if_error: false 
