@@ -51,6 +51,3 @@ La aplicación se ejecuta en `http://localhost:3000`
 
 - Todos los endpoints (excepto `/health`, `/register` y `/login`) requieren autenticación. No se tiene tracking del endpoint `/health`
 - La aplicación incluye tracking automático de todas las actividades de usuarios autenticados. Esto se realiza mediante un middleware que se encuentra presente para todos los endpoints
-
-
-## Como correr la app.
