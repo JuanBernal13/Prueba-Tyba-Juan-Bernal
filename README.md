@@ -30,7 +30,7 @@ Se añade coleccion de postman con todos los endpoints funcionales para cada uno
 
 ## Automatizacion de pruebas.
 
-Se crea un pequeño test del endpoint de health con el fin de crear una `Github Action` y correr los tests cada vez que se hace un commit o se abre un PR.
+Se crea un pequeño test del endpoint de health con el fin de crear una `Github Action` y correr los tests cada vez que se hace un commit o se abre un PR. Esto se evidencia en el siguiente PR: https://github.com/JuanBernal13/Prueba-Tyba-Juan-Bernal/pull/2
 ## Info
 
 - Todos los endpoints (excepto `/health`, `/register` y `/login`) requieren autenticación. No se tiene tracking del endpoint `/health`
