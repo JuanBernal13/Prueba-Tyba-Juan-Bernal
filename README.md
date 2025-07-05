@@ -20,6 +20,8 @@
 - **POST** `/api/v1/restaurants` - Busca restaurantes cercanos a coordenadas específicas (requiere autenticación)
   - Body: `{ "latitud": number, "longitud": number }`
 
+Cada uno de los respectivos `Endpoints` cuenta con el middleware de `tracking` al igual que, la verificacion de los datos y la correspondencia a los modelos definidos en la base de datos Mongo
+
 ## Funcionamiento de Cookies para la autenticacion de forma exitosa
 
 La aplicación utiliza cookies de sesión httpOnly de Express para autenticar a los usuarios, con una duración de 24 horas, y se elimina al hacer logout. El middleware de autenticación verifica la existencia de la sesión activa antes de permitir el acceso a los endpoints protegidos.
